@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Dataset</title>
+</head>
+<body>
+    <h1>First 5 Rows of Titanic Dataset</h1>
+    <table border="1">
+        {% for row in data %}
+        <tr>
+            {% for column in row %}
+            <td>{{ column }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+   
+   <h2>Survivors by Gender</h2>
+    <div class="bar">
+        <div class="men-survived"></div>
+    </div>
+    <div class="bar">
+        <div class="women-survived"></div>
+    </div>
+    <p>Men Survived: {{ men_survived }}</p>
+    <p>Women Survived: {{ women_survived }}</p></html>
